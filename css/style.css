@@ -3,7 +3,11 @@
 }
 
 body {
-    margin: 0,0,0,0;
+    width:100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
 }
 
 .clearfix {
@@ -11,14 +15,13 @@ body {
 }
 
 .header-banner {
-    padding-top: 400px;
-    padding-bottom: 400px;
+    padding-top: 50%;
     color: #ffffff;
     font-family: Helvetica, serif;
     font-weight: 100;
     background-color: #1a1a1a;
     background-image:url("../assets/MBD-icon-\(Transparent\).png");
-    background-attachment: scroll;
+    background-attachment:fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 1500px, 3400px;
@@ -27,27 +30,46 @@ body {
 
 .container-width {
     width: 100%;
-    max-width: 1150px;
-    margin: 0 auto;
+    margin: 0;
+    background: fixed;
+
 }
 
 .menu {
     overflow: hidden;
-    position: absolute; /* Set the navbar to fixed position */
-    top: 10px; /* Position the navbar at the top of the page */
-    width: 85%; /* Full width */
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    align-items: center;
+}
+.nav-item{
+    list-style-type: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
 }
 
 .menu-item {
-    float: right;
-    font-size: 15px;
+    font-size: 20px;
+    margin-top: 10px;
     color: #fff;
-    width: 120px;
-    padding: 10px;
-    min-height: 50px;
+    padding: 15px;
     text-align: center;
-    line-height: 30px;
-    font-weight: 400;
+    font-weight: 100;
+}
+
+.menu-item:hover{
+    background-color: #aec3fc;
+    transition: 0.3s;
+}
+
+.menu-item.active{
+    background-color: #334ca9;
+}
+
+.menu .icon{
+    display: none;
 }
 
 .lead-title {
@@ -535,76 +557,122 @@ body {
     margin: 0 10px;
 }
 
+.about-section{
+    background-color: #1a1a1a;
+    color: #fafafa;
+    text-align: center;
+    margin-top: 25px;
+    padding: auto;
+
+}
+
 .about-section h1{
-    color:#050558;
+    color:#fafafa;
     font: bold;
 }
 
 .about-section h2{
-    color: #222222;
-    text-align: center;
-}
-.officers-section{
-    padding: 50px;
-    text-align: center;
-    background-color: #474e5d;
-    color: white;
+    color: #777;
 }
 
-.officers-section.h1{
-    text-align:center
+.about-section p{
+    text-align: left;
+}
+
+.officers-section{
+    padding: auto;
+    background-color: #1a1a1a;
+    display:block;
+    color: #ffffff;
+    
+}
+
+.officers-section h1{
+    text-align:center;
+    font-size: 300;
+    padding: 20px;
+}
+
+.officers-section a{
+    display: block;
 }
 
 .officer-column {
-    float: left;
-    width: 25%;
-    margin-bottom: 16px;
-    padding: 0 8px;
+    width: 600px;
+    font-family: Helvetica, serif;
+    background-color: #313131;
+    margin-top: 25px;
+    position:static;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    font-weight: 100;
+    flex-wrap: wrap;
+    text-align: left;
   }
   
-  .officer-card {
-    box-shadow: 0 4px 8px 0 rgba(115, 149, 250, 0.913);
-    margin: 8px;
-    width: 100%;
+.officer-card {
+    height: 400px;
+    display:inline-flex;
+    margin: 30px;
+    width: 100px;
   }
-  
-  .officer-container {
-    padding: 0 16px;
+
+  .officer-container{
+    margin-left: 30px;
+    display: inline;
   }
-  
-  .officer-container::after, .officer-row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+  h2{
+    text-align: center;
+    display: flex;
+    color: #fafafa;
   }
   
   .officer-title {
     color: grey;
-  }
-  
-  .officer-button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
     text-align: center;
-    cursor: pointer;
-    width: 100%;
   }
 
   .button:hover {
     background-color: #555;
   }
   
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 768px) {
+
+    /*Style for screens smaller than 768px (typical phone size)*/
+
+    body {
+        font-size: 14px;
+        width:100%;
+        
+    }
     .column {
       width: 100%;
       display: block;
     }
-  }
 
+    .nav-item a:not(first-child){
+        display: none;
+    }
+    .menu a.icon{
+        float: right;
+        display: block;
+    }
+
+    .menu.responsive {
+        position: relative;
+    }
+    .menu.responsive a.icon{
+        position: absolute;
+        right:0;
+        top: 0;
+    }
+    .menu.nav-item.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+  }
 
 @media (max-width: 768px) {
     .foot-form-cont {
@@ -612,8 +680,9 @@ body {
     }
 
     .foot-form-title {
-        width: autopx;
+        width: auto;
     }
+
 }
 
 @media (max-width: 480px) {

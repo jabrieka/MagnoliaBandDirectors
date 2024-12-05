@@ -12,27 +12,31 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
             <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
             <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+            <script>
+              function myFunction(){
+              var x = 
+              document.getElementById("myNav");
+              if (x.className === "nav-item") {
+                x.className += "responsive";
+              }
+              else{
+                x.className = "nav-item";
+              }
+            }
+            </script>
           </head>
           <body>
             <body>
               <header class="header-banner">
                 <div class="container-width">
                   <nav class="menu">
-                    <!-- <span class="nav-item">
-                      <a class="menu-item" href="">Resources</a>
-                    </span> -->
-                    <span class="nav-item">
-                        <a class="menu-item scroll-link" id=".bdg-sect" href="officers.html">Officers</a>
-                    </span>
-                    <span class="nav-item">
-                      <a class="menu-item" href="https://www.canva.com/design/DAFUAje_mnM/11EycZ7sehlPkjwd6vkepw/view?utm_content=DAFUAje_mnM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Newsletter</a>
-                    </span>
-                    <span class="nav-item">
-                        <a class="menu-item active" aria-current="page" href="#">About</a>
-                    </span>
-                    <span class="nav-item">
-                        <a class="menu-item" href="index.html">Home</a>
-                      </span>
+                    <ul class="nav-item">
+                      <li><a class="menu-item" href="officers.html">Officers</a></li>
+                      <li><a class="menu-item" href="">Newsletter</a></li>
+                      <li><a class="menu-item" href="about.html">About</a></li>
+                      <li><a class="menu-item" href="index.html">Home</a></li>
+                    </ul>
+                    <a class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
                   </nav>
                 </div>
               </header>
@@ -40,25 +44,29 @@
             <section>
               <div class="officers-section">
                 <h1>Hall of Fame</h1>
-                <img src="assets/HOF-History/1.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-Program/3.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/2.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/3.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/4.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/5.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/6.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/7.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/8.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/9.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/10.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/11.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/12.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/13.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/14.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/15.png" alt="" width="600" height="auto">
-                <img src="assets/HOF-History/16.png" alt="" width="600" height="auto">
-              </div>
-
+                <h2>Early Members</h2>
+                <a class="HOF" href="/assets/HOF-History/DollyeRobinson.png">Dr. Dollye Robinson</a>
+                <a class="HOF" href="/assets/HOF-History/5.png">Amos Wright</a>
+                <a class="HOF" href="/assets/HOF-History/EstusSmith.png">Dr. Estus Smith</a>
+                <a class="HOF" href="/assets/HOF-History/7.png">Mae Robinson Brown</a>
+                <a class="HOF" href="/assets/HOF-History/6.png">Kermit Holly, Sr.</a>
+                <a class="HOF" href="/assets/HOF-History/8.png">Dr. Lewis Liddell</a>
+                <h2>2020</h2>
+                <a class="HOF" href="/assets/HOF-History/9.png">Samuel Griffin</a>
+                <a class="HOF" href="/assets/HOF-History/10.png">Edward Duplessis, Sr.</a>
+                <a class="HOF" href="/assets/HOF-History/11.png"> Russell Boone, Sr.</a>
+                <a class="HOF" href="/assets/HOF-History/12.png">James Stamps</a>
+                <h2>2021</h2>
+                <a class="HOF" href="/assets/HOF-History/13.png">Charles Bradley</a>
+                <a class="HOF" href="/assets/HOF-History/16.png">Tony Winters</a>
+                <a class="HOF" href="/assets/HOF-History/14.png">Joseph Mitchell</a>
+                <a class="HOF" href="/assets/HOF-History/15.png">Zachary Harris</a>
+                <h2>2023</h2>
+                <a class="HOF">Jennifer S. Lloyd</a>
+                <h2>2024</h2>
+                <a class="HOF">Daryl Harris</a>
+                <a class="HOF">Fulton Caston</a>
+                <button onclick="window.history.back()">Go back</button>
             </section>
             <footer class="footer-under">
               <div class="container-width">
