@@ -5,8 +5,8 @@
 body {
     width:100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     overflow-x:hidden;
 }
 
@@ -39,20 +39,21 @@ body {
     overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    align-items: center;
+    background-color: #313131;
+    padding-top: 10px;
+    vertical-align: center;
 }
 .nav-item{
     list-style-type: none;
-    padding: 10px 0 0 0;
-    margin: 0;
-    display: flex;
+    display: block;
     justify-content: space-around;
     overflow: hidden;
+    padding:10px;
+    display: table-cell;
 }
 
 .menu-item {
     font-size: 20px;
-    margin-top: 10px;
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -342,7 +343,6 @@ body {
     text-align: center;
 }
 
-
 .footer-under {
     background-color:#2a2a2a;
     padding-top: 100px;
@@ -357,7 +357,7 @@ body {
     background-color: rgba(0, 0, 0, 0.15);
     color: rgba(238, 238, 238, 0.5);
     bottom: 0;
-    padding: 1em 0;
+    padding: 1em;
     position: absolute;
     width: 100%;
     font-size: 0.75em;
@@ -482,6 +482,7 @@ body {
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
+
 }
 
 .badge {
@@ -499,9 +500,6 @@ body {
 .badge-header {
     height: 115px;
     background-color: #aec3fc;
-    background-image: url("../assets/Concert-Band-Festival/1.png");
-    background-position: center center, center center;
-    background-attachment: fixed;
     overflow: hidden;
 }
 
@@ -560,19 +558,17 @@ body {
 .about-section{
     background-color: #1a1a1a;
     color: #fafafa;
-    text-align: center;
-    margin-top: 25px;
-    padding: auto;
-
 }
 
 .about-section h1{
     color:#fafafa;
     font: bold;
+    text-align: center;
 }
 
 .about-section h2{
     color: #777;
+    text-align: center;
 }
 
 .about-section p{
@@ -580,10 +576,9 @@ body {
 }
 
 .officers-section{
-    padding: auto;
     background-color: #1a1a1a;
-    display:block;
     color: #ffffff;
+    padding:auto;
     
 }
 
@@ -592,52 +587,216 @@ body {
     font-size: 300;
     padding: 20px;
 }
-
-.officers-section a{
-    display: block;
-}
-
 .officer-column {
-    width: 600px;
     font-family: Helvetica, serif;
-    background-color: #313131;
-    margin-top: 25px;
     position:static;
+    background-color: #313131;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
     font-weight: 100;
-    flex-wrap: wrap;
     text-align: left;
+    padding: 25px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    
   }
   
 .officer-card {
-    height: 400px;
-    display:inline-flex;
-    margin: 30px;
-    width: 100px;
-  }
-
-  .officer-container{
-    margin-left: 30px;
-    display: inline;
-  }
-
-  h2{
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(211, 211, 211, 0.811);
+    max-width: 300px;
+    max-height: 460px;
+    margin: 25px 15px;
     text-align: center;
-    display: flex;
+    overflow: hidden;
+  }
+  
+  .officer-avatar{
+    width: 270px;
+    margin: 20px 10px;
+    height: 300px;
+    border: 5px solid #fff;
+
+  }
+
+  .officer-card h2{
+    text-align: center;
     color: #fafafa;
+    padding-top: 25px;
   }
   
   .officer-title {
     color: grey;
     text-align: center;
+    padding-top: 10px;
   }
 
   .button:hover {
     background-color: #555;
   }
+
+  .membership-section {
+    background-color: #1a1a1a;
+    color: #fafafa;
+    text-align: center;
+    display: inline-block;
+}
+
+  .membership-section button{
+    background-color: #1a1a1a; 
+    border: 1px solid #1a1a1a; 
+    color: #ffffff; /* White text */
+    font-size: 36;
+    font-weight: bolder;
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    text-align: center;
+  }
+
+  .membership-section button:hover{
+    background-color: #aec3fc;
+    opacity: 75%;
+    color: #222222;
+  }
+
+  .member-row{
+    margin: 0 -5px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    flex:auto
+  }
+
+  .member-row::after{
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+
+  .member-column{
+    background-color: #1a1a1a;
+    padding: 20 50px;
+    float: left;
+    width: 25%;
+  }
+
+  .member-card{
+    box-shadow: 0 4px 8px 0 rgb(215, 214, 214);
+    background-color: #6e6c6c;
+    text-align: center;
+    font-family: arial;
+    max-width: 300px;
+    height: 300px;
+    display: table-cell;
+    vertical-align:middle;
+  }
+
+
+
+  .member-card .price{
+    font-size: 22px;
+    background-color: #444a5f;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+
+  .member-card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #767474;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .member-card button:hover{
+    opacity: 0.7;
+  }
+
+  .HOF-section{
+    background-color: #1a1a1a;
+    color: #aec3fc;
+    text-align: center;
+  }
+
+  .HOF-section h2{
+    text-align: center;
+    display: block;
+  }
+
+  .HOF-section button{
+    background-color: #1a1a1a; /* Green background */
+    border: 1px solid #1a1a1a; /* Green border */
+    color: #ffffff; /* White text */
+    font-size: large;
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    text-align: center;
+  }
+
+  .HOF-section button:hover{
+    background-color: #aec3fc;
+    opacity: 75%;
+    color: #222222;
+  }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
   
-  @media screen and (max-width: 768px) {
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
 
     /*Style for screens smaller than 768px (typical phone size)*/
 
@@ -654,23 +813,29 @@ body {
     .nav-item a:not(first-child){
         display: none;
     }
-    .menu a.icon{
+    .nav-item a.icon{
         float: right;
         display: block;
     }
 
-    .menu.responsive {
+    .nav-item.responsive {
         position: relative;
     }
-    .menu.responsive a.icon{
+    .nav-item.responsive a.icon{
         position: absolute;
         right:0;
         top: 0;
     }
-    .menu.nav-item.responsive a {
+    .nav-item.responsive a {
         float: none;
         display: block;
         text-align: left;
+    }
+
+    .member-column{
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
     }
   }
 

@@ -12,12 +12,14 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
             <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
             <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+            <!----------Font Awesome---------->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
             <script>
               function myFunction(){
               var x = 
               document.getElementById("myNav");
               if (x.className === "nav-item") {
-                x.className += "responsive";
+                x.className += " responsive";
               }
               else{
                 x.className = "nav-item";
@@ -29,44 +31,312 @@
             <body>
               <header class="header-banner">
                 <div class="container-width">
-                  <nav class="menu">
-                    <ul class="nav-item">
-                      <li><a class="menu-item" href="officers.html">Officers</a></li>
-                      <li><a class="menu-item" href="">Newsletter</a></li>
-                      <li><a class="menu-item" href="about.html">About</a></li>
-                      <li><a class="menu-item" href="index.html">Home</a></li>
-                    </ul>
-                    <a class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
-                  </nav>
+                  <div class="menu">
+                    <div class="nav-item" id="myNav">
+                    <a class="menu-item" href="officers.html">Officers</a>
+                    <a class="menu-item" href="">Newsletter</a>
+                    <a class="menu-item" href="about.html">About</a>
+                    <a class="menu-item" href="index.html">Home</a>
+                    <a href="javascript:void(0);" class="icon" aria-label="Bars when screen gets smaller" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                  </div>
                 </div>
               </header>
             </body>
             <section>
-              <div class="officers-section">
-                <h1>Hall of Fame</h1>
-                <h2>Early Members</h2>
-                <a class="HOF" href="/assets/HOF-History/DollyeRobinson.png">Dr. Dollye Robinson</a>
-                <a class="HOF" href="/assets/HOF-History/5.png">Amos Wright</a>
-                <a class="HOF" href="/assets/HOF-History/EstusSmith.png">Dr. Estus Smith</a>
-                <a class="HOF" href="/assets/HOF-History/7.png">Mae Robinson Brown</a>
-                <a class="HOF" href="/assets/HOF-History/6.png">Kermit Holly, Sr.</a>
-                <a class="HOF" href="/assets/HOF-History/8.png">Dr. Lewis Liddell</a>
-                <h2>2020</h2>
-                <a class="HOF" href="/assets/HOF-History/9.png">Samuel Griffin</a>
-                <a class="HOF" href="/assets/HOF-History/10.png">Edward Duplessis, Sr.</a>
-                <a class="HOF" href="/assets/HOF-History/11.png"> Russell Boone, Sr.</a>
-                <a class="HOF" href="/assets/HOF-History/12.png">James Stamps</a>
-                <h2>2021</h2>
-                <a class="HOF" href="/assets/HOF-History/13.png">Charles Bradley</a>
-                <a class="HOF" href="/assets/HOF-History/16.png">Tony Winters</a>
-                <a class="HOF" href="/assets/HOF-History/14.png">Joseph Mitchell</a>
-                <a class="HOF" href="/assets/HOF-History/15.png">Zachary Harris</a>
-                <h2>2023</h2>
-                <a class="HOF">Jennifer S. Lloyd</a>
-                <h2>2024</h2>
-                <a class="HOF">Daryl Harris</a>
-                <a class="HOF">Fulton Caston</a>
-                <button onclick="window.history.back()">Go back</button>
+            <div class="HOF-section">
+            <h2>Early Members</h2>
+            
+            <!-- Trigger/Open The Modal -->
+            <button id="DR" class="myBtn">Dollye Robinson</button>
+
+            <!-- The Modal -->
+            <div id="myModal1" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/DollyeRobinson.png" alt="Dollye Robinson">
+              </div>
+
+            </div>
+
+            <button id="AW" class="myBtn">Amos Wright</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/5.png" alt="Amos Wright">
+              </div>
+
+            </div>
+
+            <button id="ES" class="myBtn">Estus Smith</button>
+            <div id="myModal3" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/EstusSmith.png" alt="Estus Smith">
+              </div>
+
+            </div>
+            
+            <button id="MRB" class="myBtn">Mae Robinson Brown</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/7.png" alt="Mae Robinson Brown">
+              </div>
+
+            </div>
+
+            <button id="KH" class="myBtn">Kermit Holly, Sr.</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/6.png" alt="Kermit Holly, Sr.">
+              </div>
+
+            </div>
+
+            <button id="LL" class="myBtn">Dr. Lewis Liddell</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/8.png" alt="Dr. Lewis Liddell">
+              </div>
+
+            </div>
+
+            <h2>2020</h2>
+
+            <button id="SG" class="myBtn">Samuel Griffin</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/9.png" alt="Samuel Griffin">
+              </div>
+
+            </div>
+
+            <button id="ED" class="myBtn">Edward Duplessis, Sr.</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/10.png" alt="Edward Duplessis, Sr.">
+              </div>
+
+            </div>
+
+            <button id="RB" class="myBtn">Russell Boone, Sr.</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/11.png" alt="Russell Boone, Sr.">
+              </div>
+
+            </div>
+
+            <button id="JS" class="myBtn">James Stamps</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/12.png" alt="James Stamps">
+              </div>
+
+            </div>
+
+            <h2>2021</h2>
+
+            <button id="CB" class="myBtn">Charles Bradley</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/13.png" alt="Charles Bradley">
+              </div>
+
+            </div>
+
+            <button id="TW" class="myBtn">Tony Winters</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/16.png" alt="Tony Winters">
+              </div>
+
+            </div>
+
+            <button id="JM" class="myBtn">Joseph Mitchell</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/14.png" alt="Joseph Mitchell">
+              </div>
+
+            </div>
+
+            <button id="ZH" class="myBtn">Zachary Harris</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/15.png" alt="Zachary Harris">
+              </div>
+
+            </div>
+
+            <h2>2023</h2>
+
+            <button id="JSL" class="myBtn">Jennifer S. Lloyd</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/JenniferLoyd.png" alt="Jennifer S. Lloyd">
+              </div>
+
+            </div>
+
+            <h2>2024</h2>
+
+            <button id="DH" class="myBtn">Daryl Harris</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/DarrylHarris.png" alt="Daryl Harris">
+              </div>
+
+            </div>
+
+            <button id="FC" class="myBtn">Fulton Caston</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="/assets/HOF-History/FultonCaston.png" alt="Fulton Caston">
+              </div>
+
+            </div>
+            </div>
+
+            <script>
+              // Get the modal
+              var modal = document.getElementsByClassName("modal");
+              
+              // Get the button that opens the modal
+              var btn = document.getElementsByClassName("myBtn");
+              
+              // Get the <span> element that closes the modal
+              var span = document.getElementsByClassName("close");
+              
+              // When the user clicks the button, open the modal 
+              btn[0].onclick = function() {
+                modal[0].style.display = "block";
+              }
+              btn[1].onclick = function() {
+                modal[1].style.display = "block";
+              }
+              btn[2].onclick = function() {
+                modal[2].style.display = "block";
+              }
+              btn[3].onclick = function() {
+                modal[3].style.display = "block";
+              }
+              btn[4].onclick = function() {
+                modal[4].style.display = "block";
+              }
+              btn[5].onclick = function() {
+                modal[5].style.display = "block";
+              }
+              btn[6].onclick = function() {
+                modal[6].style.display = "block";
+              }
+              btn[7].onclick = function() {
+                modal[7].style.display = "block";
+              }
+              btn[8].onclick = function() {
+                modal[8].style.display = "block";
+              }
+              btn[9].onclick = function() {
+                modal[9].style.display = "block";
+              }
+              btn[10].onclick = function() {
+                modal[10].style.display = "block";
+              }
+              btn[11].onclick = function() {
+                modal[11].style.display = "block";
+              }
+              btn[12].onclick = function() {
+                modal[12].style.display = "block";
+              }
+              btn[13].onclick = function() {
+                modal[13].style.display = "block";
+              }
+              btn[14].onclick = function() {
+                modal[14].style.display = "block";
+              }
+              btn[15].onclick = function() {
+                modal[15].style.display = "block";
+              }
+              btn[16].onclick = function() {
+                modal[16].style.display = "block";
+              }
+              
+              // When the user clicks on <span> (x), close the modal
+              span[0].onclick = function() {
+                modal[0].style.display = "none";
+              }
+              span[1].onclick = function() {
+                modal[1].style.display = "none";
+              }
+              span[2].onclick = function() {
+                modal[2].style.display = "none";
+              }
+              span[3].onclick = function() {
+                modal[3].style.display = "none";
+              }
+              span[4].onclick = function() {
+                modal[4].style.display = "none";
+              }
+              span[5].onclick = function() {
+                modal[5].style.display = "none";
+              }
+              span[6].onclick = function() {
+                modal[6].style.display = "none";
+              }
+              span[7].onclick = function() {
+                modal[7].style.display = "none";
+              }
+              span[8].onclick = function() {
+                modal[8].style.display = "none";
+              }
+              span[9].onclick = function() {
+                modal[9].style.display = "none";
+              }
+              span[10].onclick = function() {
+                modal[10].style.display = "none";
+              }
+              span[11].onclick = function() {
+                modal[11].style.display = "none";
+              }
+              span[12].onclick = function() {
+                modal[12].style.display = "none";
+              }
+              span[13].onclick = function() {
+                modal[13].style.display = "none";
+              }
+              span[14].onclick = function() {
+                modal[14].style.display = "none";
+              }
+              span[15].onclick = function() {
+                modal[15].style.display = "none";
+              }
+              span[16].onclick = function() {
+                modal[16].style.display = "none";
+              }
+              
+              // When the user clicks anywhere outside of the modal, close it
+              window.onclick = function(event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+              }
+              </script>
             </section>
             <footer class="footer-under">
               <div class="container-width">
@@ -80,9 +350,9 @@
                         </div>
                         <div class="foot-list">
                           <a class="foot-list-title active" aria-current="page" href="#">Hall of Fame</a>
-                          <a class="foot-list-item" href="https://www.canva.com/design/DAFUAje_mnM/11EycZ7sehlPkjwd6vkepw/view?utm_content=DAFUAje_mnM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Newsletter</a>
+                          <a class="foot-list-item" href="">Newsletter</a>
                           <a class="foot-list-item" href="officers.html">Officers</a>
-                          <a class="foot-list-item">Members & Dues</a>
+                          <a class="foot-list-item" href="Membership.html">Members & Dues</a>
                         </div>
                         <div class="clearfix"></div>
                       </nav>
@@ -108,6 +378,10 @@
                 </div>
               </div>
             </footer>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+            <script src="./js/slick.js"></script>
+            <script src="https://kit.fontawesome.com/05e2292e36.js" crossorigin="anonymous"></script>
     
 </body>
 </html>
