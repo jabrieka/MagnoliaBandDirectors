@@ -558,6 +558,7 @@ body {
 .about-section{
     background-color: #1a1a1a;
     color: #fafafa;
+    padding: 10px;
 }
 
 .about-section h1{
